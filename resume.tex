@@ -70,7 +70,7 @@
 		%\rule{\textwidth}{0.5pt}
 		\begin{multicols}{2}
 			\raggedcolumns
-			\subsubsection*{Software Engineer}
+			\subsubsection*{Software Engineer Intern}
 			{\color{black}VladLink LLC. Vladivostok, 2008 -- 2010}
 			\begin{items}
 				\item Optimized algorithm of tile map generation reduced the working time from a week to half an hour.
@@ -83,6 +83,7 @@
 			{\color{black}Insight Experts LLC. Vladivostok, 2007 -- 2008}
 			\begin{items}
 				\item Reduced time of reports generation from 10 to 1 second by optimizing complex SQL queries.
+				\item Utilized GNU gettext to provide multilingual user interface.
 			\end{items}
 		\end{multicols}
 
@@ -93,9 +94,9 @@
 	\begin{multicols}{2}
 		\raggedcolumns
 		%\begin{project}{<<Freedroid RPG>>}{Google Summer of Code, C, 2010.}
-		\begin{project}{<<RBTools>>}{\begin{tabular}{@{}l|l}Google Summer of Code, 2011 & Python\\\end{tabular}}
+		\begin{project}{<<Review Board>>}{\begin{tabular}{@{}l|l}Google Summer of Code, 2011 & Python\\\end{tabular}}
 		%\begin{project}{<<FriCAS interface for TeXmacs>>}{Autumn Marathon, Lisp(Boot), 2010.}
-			Command-line interface for the Review Board pre-review system.
+			Command-line interface for the code pre-review system.
 			\begin{items}
 				\item Designed and partially implemented code generator for making remote API requests.
 				\item Covered new and legacy code with tests increasing coverage from 31$\%$ to 42$\%$.
@@ -104,7 +105,7 @@
 
 		\begin{project}{<<FriCAS>>}{\begin{tabular}{@{}l|l}Autumn Marathon Contest, 2010 & Axiom, Scheme\\\end{tabular}}
 		%\begin{project}{<<FriCAS interface for TeXmacs>>}{Autumn Marathon, Lisp(Boot), 2010.}
-			One of the Axiom's forks.
+			Open-source advanced computer algebra system.
 			\begin{items}
 				\item Reduced FriCAS outcome latency by 70$\%$ by getting rid of the glue program that converted FriCAS output in \TeX{} and adding support of TeXmacs data syntax into FriCAS.
 			\end{items}
@@ -120,43 +121,49 @@
 			\end{items}
 		\end{project}
 
-		%\begin{project}{<<Hedgewars>>}{\begin{tabular}{@{}l|l}Course work, 2009 & Free Pascal\\\end{tabular}}
-
-		%	Turn-based open-source game, a clone of so famous \emph{Worms}.
-		%	\begin{items}
-		%		\item Implemented AI for the \emph{teleport} weapon using desicion trees.
-		%		\item Implemented new weapon with complex action.
-		%	\end{items}
-		%\end{project}
-
 		\begin{project}{Compiler}{\begin{tabular}{@{}l|l}Course work, 2008 & C\texttt{++}\\\end{tabular}}
-			Pascal compiler with all basic statements, arrays, structures and arguments passing by reference.
+			Pascal to assembly code translator.
+			\begin{items}
+				\item Implemented all basic statements, including procedures and functions.
+				\item Implemented arrays, structures and mixed declarations of arrays and structures.
+				\item Implemented function arguments passing by reference.
+			\end{items}
 		\end{project}
 	\end{multicols}
 
 	\section{Education}
-	\begin{items}
-		\item \textbf{MS, Computer Science and Applied Math}\\
-		Far Eastern Federal University, 2006 -- 2011.
-	\end{items}
+		\begin{multicols}{2}
+			\raggedcolumns
+			\begin{items}
+				\item \textbf{MS, Computer Science and Applied Math}\\
+				Far Eastern Federal University, 2006 -- 2011.
+			\end{items}
+			\columnbreak
+			% this hack prevents above block from breaking onto two columns
+			\hspace{10mm}
+		\end{multicols}
 
 	\section{Skills}
 	\begin{multicols}{2}
 		\raggedcolumns
 		\begin{items}
 			\item \textbf{CS fundamentals}: general knowledge of algorithms and data structures, understanding of x86 architecture basics, discreet math, object-oriented programming, functional programming.
-			\item \textbf{Source Control Management}: git, subversion
-			\columnbreak
 			\item \textbf{Languages}: C, C\texttt{++}, Java, Perl, Python, JavaScript.
+			\columnbreak
+			\item \textbf{Source Control Management}: git, subversion
 			\item \textbf{Developer tools}: autotools, ant, Eclipse, valgrind, gdb, GNU coreutils.
 		\end{items}
 	\end{multicols}
 
 	\section{Awards}
 	\begin{items}
-		\item \textbf{\Rmnum{3} degree diploma}\\ACM ICPC'2010 NEERC (Siberian group).
-		\item \textbf{\Rmnum{3} degree diploma}\\ACM ICPC'2009 NEERC (Siberian group).
-		\item \textbf{\Rmnum{1} degree diploma}\\Game Development Contest,\\Far Eastern Federal University, 2006.
+		\begin{multicols}{2}
+			\raggedcolumns
+			\item \textbf{\Rmnum{3} degree diploma}\\ACM ICPC'2010 NEERC (Siberian group).
+			\item \textbf{\Rmnum{3} degree diploma}\\ACM ICPC'2009 NEERC (Siberian group).
+			\columnbreak
+			\item \textbf{\Rmnum{1} degree diploma}\\Game Development Contest,\\Far Eastern Federal University, 2006.
+		\end{multicols}
 	\end{items}
 
 \end{document}
