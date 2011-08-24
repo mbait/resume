@@ -31,15 +31,25 @@
 \definecolor{dark-gray}{gray}{0.30}
 
 % For 'Projects' section
-\newenvironment{project}[2]
-{\subsubsection*{#1}\color{black}#2\vspace{1ex}\\\color{dark-gray}}{}
+\newenvironment{project1}[2]
+{\subsubsection*{\fontfamily{qag}\selectfont{#1}}{\color{black}#2}}{}
+
+\newenvironment{project2}[2]
+{\subsubsection*{\fontfamily{qag}\selectfont{#1}}{\color{black}#2\vspace{1ex}\\}}{}
 
 % Double-underlined headers
-\renewcommand{\section}[1]
-{\begin{tabularx}{\textwidth}{@{}X}\color{black}\textbf{\large #1}\\\hline\end{tabularx}}
+\renewcommand{\section}[1]{
+	\begin{tabularx}{\textwidth}{@{}X}
+		\color{black}
+		\fontfamily{qag}\selectfont{{\large #1}}\\
+		\hline
+	\end{tabularx}}
 
-\renewcommand{\subsection}[1]
-{\begin{tabularx}{\columnwidth}{@{}X}\textbf{\large #1}\\\hline \hline\end{tabularx}}
+\renewcommand{\subsection}[1]{
+	\begin{tabularx}{\columnwidth}{@{}X}
+		\fontfamily{qag}\selectfont{\textbf{\large #1}}\\
+		\hline
+	\end{tabularx}}
 
 \newenvironment{items}
 {\begin{list}{\labelitemi}{\leftmargin=1.5em}}

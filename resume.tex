@@ -2,7 +2,8 @@
 
 \usepackage[T1]{fontenc}
 %\usepackage{helvet}
-\usepackage{lmodern}
+%\usepackage{tgadventor} % for the headings
+\usepackage{lmodern} % for the text
 \usepackage{hyperref}
 \usepackage{geometry}
 \usepackage{sectsty}
@@ -16,6 +17,7 @@
 
 \usepackage{style}
 
+%\allsectionsfont{\fontfamily{tgadventor}}
 
 %\newenvironment{itemize*}%
 %{\begin{itemize}%
@@ -30,7 +32,7 @@
 %\usepackage[sc,osf]{mathpazo}
 
 % Set your name here
-\def\name{Alexander Solovets}
+\def\name{\fontfamily{phv}\selectfont{Alexander Solovets}}
 \markright{\name}
 
 % The following metadata will show up in the PDF properties
@@ -63,28 +65,31 @@
 
 %\begin{multicols}{2}
 	%\subsection*{Employment}
-	\begin{tabularx}{\textwidth}{@{}X}
-		\textbf{\color{black}\large Employment}\\
-		\hline
-	\end{tabularx}
+	%\begin{tabularx}{\textwidth}{@{}X}
+	%	\textbf{\color{black}\large Employment}\\
+	%	\hline
+	%\end{tabularx}
+	\section{Employment}
 		%\rule{\textwidth}{0.5pt}
 		\begin{multicols}{2}
 			\raggedcolumns
-			\subsubsection*{Software Engineer Intern}
-			{\color{black}VladLink LLC. Vladivostok, 2008 -- 2010}
-			\begin{items}
-				\item Optimized algorithm of tile map generation reduced the working time from a week to half an hour.
-				\item Designed and implemented multiuser GIS web-application for interactive visualization of the city network, using Google Developer Toolkit, OpenLayers and Java Persistence API.
-			\end{items}
+			%\subsubsection*{\fontfamily{qag}\selectfont{Software Engineer Intern}
+			%{\color{black}VladLink LLC. Vladivostok, 2008 -- 2010}
+			\begin{project1}{Software Engineer Intern}{VladLink LLC. Vladivostok, 2008 -- 2010}
+				\begin{items}
+					\item Optimized algorithm of tile map generation reduced the working time from a week to half an hour.
+					\item Designed and implemented multiuser GIS web-application for interactive visualization of the city network, using Google Developer Toolkit, OpenLayers and Java Persistence API.
+				\end{items}
+			\end{project1}
 
 			\columnbreak
 
-			\subsubsection*{Software Engineer Intern}
-			{\color{black}Insight Experts LLC. Vladivostok, 2007 -- 2008}
-			\begin{items}
-				\item Reduced time of reports generation from 10 to 1 second by optimizing complex SQL queries.
-				\item Utilized GNU gettext to provide multilingual user interface.
-			\end{items}
+			\begin{project1}{Software Engineer Intern}{Insight Experts LLC. Vladivostok, 2007 -- 2008}
+				\begin{items}
+					\item Reduced time of reports generation from 10 to 1 second by optimizing complex SQL queries.
+					\item Utilized GNU gettext to provide multilingual user interface.
+				\end{items}
+			\end{project1}
 		\end{multicols}
 
 	%\columnbreak
@@ -94,41 +99,41 @@
 	\begin{multicols}{2}
 		\raggedcolumns
 		%\begin{project}{<<Freedroid RPG>>}{Google Summer of Code, C, 2010.}
-		\begin{project}{<<Review Board>>}{\begin{tabular}{@{}l|l}Google Summer of Code, 2011 & Python\\\end{tabular}}
+		\begin{project2}{<<Review Board>>}{\begin{tabular}{@{}l|l}Google Summer of Code, 2011 & Python\\\end{tabular}}
 		%\begin{project}{<<FriCAS interface for TeXmacs>>}{Autumn Marathon, Lisp(Boot), 2010.}
 			Command-line interface for the code pre-review system.
 			\begin{items}
 				\item Designed and partially implemented code generator for making remote API requests.
 				\item Covered new and legacy code with tests increasing coverage from 31$\%$ to 42$\%$.
 			\end{items}
-		\end{project}
+		\end{project2}
 
-		\begin{project}{<<FriCAS>>}{\begin{tabular}{@{}l|l}Autumn Marathon Contest, 2010 & Axiom, Scheme\\\end{tabular}}
+		\begin{project2}{<<FriCAS>>}{\begin{tabular}{@{}l|l}Autumn Marathon Contest, 2010 & Axiom, Scheme\\\end{tabular}}
 		%\begin{project}{<<FriCAS interface for TeXmacs>>}{Autumn Marathon, Lisp(Boot), 2010.}
 			Open-source advanced computer algebra system.
 			\begin{items}
 				\item Reduced FriCAS outcome latency by 70$\%$ by getting rid of the glue program that converted FriCAS output in \TeX{} and adding support of TeXmacs data syntax into FriCAS.
 			\end{items}
-		\end{project}
+		\end{project2}
 
 		\columnbreak
 
-		\begin{project}{<<Freedroid RPG>>}{\begin{tabular}{@{}l|l}Google Summer of Code, 2010 & C\\\end{tabular}}
+		\begin{project2}{<<Freedroid RPG>>}{\begin{tabular}{@{}l|l}Google Summer of Code, 2010 & C\\\end{tabular}}
 			Open-source single person role-played game.
 			\begin{items}
 				\item Implemented algorithm of generation NetHack-styled dungeons.
 				\item Implemented algorithm of generation naturally looking forest maps based on fractals and self-similarity.
 			\end{items}
-		\end{project}
+		\end{project2}
 
-		\begin{project}{Compiler}{\begin{tabular}{@{}l|l}Course work, 2008 & C\texttt{++}\\\end{tabular}}
+		\begin{project2}{Compiler}{\begin{tabular}{@{}l|l}Course work, 2008 & C\texttt{++}\\\end{tabular}}
 			Pascal to assembly code translator.
 			\begin{items}
 				\item Implemented all basic statements, including procedures and functions.
 				\item Implemented arrays, structures and mixed declarations of arrays and structures.
 				\item Implemented function arguments passing by reference.
 			\end{items}
-		\end{project}
+		\end{project2}
 	\end{multicols}
 
 	\section{Education}
