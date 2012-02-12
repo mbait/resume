@@ -9,7 +9,7 @@
 \usepackage{sectsty}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
+\usepackage[english,russian]{babel}
 %\usepackage{parcolumns}
 \usepackage{multicol}
 \usepackage{tabularx}
@@ -32,7 +32,7 @@
 %\usepackage[sc,osf]{mathpazo}
 
 % Set your name here
-\def\name{\fontfamily{phv}\selectfont{Alexander Solovets}}
+\def\name{\fontfamily{phv}\selectfont{Александр Соловец}}
 \markright{\name}
 
 % The following metadata will show up in the PDF properties
@@ -54,101 +54,101 @@
 \begin{center}
 	{\Huge \bfseries \name}\\
 	\vskip 1ex
-	\fontfamily{qag}\selectfont{\href{tel:+7-423-253-78-95}{+7 (423) 253--78--95} {\small$\bullet$} Vladivostok, Russia {\small$\bullet$} \href{mailto:asolovets@gmail.com}{asolovets@gmail.com}}
+	\fontfamily{qag}\selectfont{\href{tel:+7-950-289-99-08}{+7 (950) 289--99--08} {\small$\bullet$} Владивосток {\small$\bullet$} \href{mailto:asolovets@gmail.com}{asolovets@gmail.com}}
 \end{center}
 
 \small
 
-	\section{Employment}
+	\section{Опыт}
 		\begin{multicols}{2}
 			\raggedcolumns
-			\begin{project1}{Software Engineer Intern}{VladLink LLC. Vladivostok, 2009 -- 2010}
+			\begin{project1}{Разработчик}{ВладЛинк, 2009 -- 2010}
 				\begin{items}
-					\item Optimized an algorithm of tile map generation reducing the working time from a week to half an hour.
-					\item Designed and implemented multiuser GIS web-application for interactive visualization of the city network, using Google Web Toolkit, OpenLayers and Java Persistence API.
+					\item Оптимизировал алгоритм генерации тайловой карты, снизив время работы с недели до получаса.
+					\item Разработал веб-приложение, отображающее состояние сети провайдера в реальном времени.
 				\end{items}
 			\end{project1}
 
 			\columnbreak
 
-			\begin{project1}{Software Engineer Intern}{Insight Experts LLC. Vladivostok, 2007 -- 2008}
+			\begin{project1}{Разработчик}{Инсайт Экспертс, 2007 -- 2008}
 				\begin{items}
-					\item Reduced time of reports generation from 10 to 1 second by optimizing complex SQL queries.
-					\item Used GNU gettext to provide multilingual user interface.
+					\item Уменьшил время генерации отчётов, оптимизировав SQL-запросы
+					\item Использовал систему GNU gettext для локализации пользовательского интерфейса.
 				\end{items}
 			\end{project1}
 		\end{multicols}
 
-	\section{Projects}
+	\section{Проекты}
 	\begin{multicols}{2}
 		\raggedcolumns
 		\begin{project2}{Review Board}{\begin{tabular}{@{}l|l}Google Summer of Code, 2011 & Python\\\end{tabular}}
-			Command-line interface for the code review system.
+			Интерфейс командной строки для системы проверки кода.
 			\begin{items}
-				\item Designed and partially implemented a code generator for making remote API requests.
-				\item Covered new and legacy code with tests increasing coverage from 31$\%$ to 42$\%$.
+				\item Разработал и реализовал генератор кода для выполнения запросов на сервер.
+				\item Добавил тесты в  унаследованный и новый код, увеличив покрытие с 31$\%$ до 42$\%$.
 			\end{items}
 		\end{project2}
 
-		\begin{project2}{FriCAS}{\begin{tabular}{@{}l|l}Autumn Marathon Contest, 2010 & Axiom, Scheme\\\end{tabular}}
-			Open-source advanced computer algebra system.
+		\begin{project2}{FriCAS}{\begin{tabular}{@{}l|l}Осенний марафон, 2010 & Axiom, Scheme\\\end{tabular}}
+			Система комьютерной алгебры.
 			\begin{items}
-				\item Reduced FriCAS feedback latency by 70$\%$ by getting rid of the glue program that converted FriCAS output in \TeX{} and adding support of TeXmacs data syntax into FriCAS.
+				\item Именьшил задержку в работе СКА на 70$\%$, заменив промежуточную процедуру конвертации \TeX{} нативной поддержкой синтаксиса редактора.
 			\end{items}
 		\end{project2}
 
 		\columnbreak
 
 		\begin{project2}{Freedroid RPG}{\begin{tabular}{@{}l|l}Google Summer of Code, 2010 & C\\\end{tabular}}
-			Open-source single person role-played game.
+			Ролевая компьютерная игра.
 			\begin{items}
-				\item Implemented an algorithm to generate NetHack-styled dungeons.
-				\item Implemented an algorithm to generate naturally looking forest maps based on fractals and self-similarity.
+				\item Реализовал алгоритм генерации подземелий в стиле <<NetHack>>.
+				\item Разработал и реализовал алгоритм генерации открытых пространств, используя свойства самоподобия фракталов.
 			\end{items}
 		\end{project2}
 
-		\begin{project2}{Compiler}{\begin{tabular}{@{}l|l}Course work, 2008 & C\texttt{++}\\\end{tabular}}
-			Pascal to assembly code translator.
+		\begin{project2}{Компилятор}{\begin{tabular}{@{}l|l}Курсовая работа, 2008 & C\texttt{++}\\\end{tabular}}
+			Транслятор ЯП <<Паскаль>> в язык ассемблера.
 			\begin{items}
-				\item Implemented all basic statements, including procedures and functions.
-				\item Implemented arrays, structures and mixed declarations of arrays and structures.
-				\item Implemented function arguments passing by reference.
+				\item Реализовал основные инструкции, включая процедуры и функции.
+				\item Реализовал массивы, структуры и их суперпозиции.
+				\item Реализовал передачу агрументов по ссылке.
 			\end{items}
 		\end{project2}
 	\end{multicols}
 
-	\section{Education}
-		\begin{multicols}{2}
-			\raggedcolumns
+	\section{Образование}
+		%\begin{multicols}{2}
+			%\raggedcolumns
 			\begin{items}
-				\item \textbf{MS, Computer Science and Applied Math}\\
-				Far Eastern Federal University, 2006 -- 2011.
+				\item \textbf{Специалист, Прикладная математика и Информатика}\\
+				Дальневосточный Федеральный университет, 2006 -- 2011.
 			\end{items}
-			\columnbreak
+			%\columnbreak
 			% this hack prevents above block from breaking onto two columns
 			\hspace{10mm}
-		\end{multicols}
+		%\end{multicols}
 
-	\section{Skills}
+	\section{Навыки}
 	\begin{multicols}{2}
 		\raggedcolumns
 		\begin{items}
-			\item \textbf{CS fundamentals}: general knowledge of algorithms and data structures, understanding of x86 architecture basics, discrete math, object-oriented programming, functional programming.
-			\item \textbf{Languages}: C, C\texttt{++}, Java, Perl, Python, JavaScript.
+			\item \textbf{Основы}: базовые знания алгоритмов и структур данных, понимание основ архитектуры x86, дискретная математика, ООП, функиональное и логическое программирование.
+			\item \textbf{Языки}: C, C\texttt{++}, Java, Perl, Python, JavaScript.
 			\columnbreak
-			\item \textbf{Source Control Management}: git, subversion
-			\item \textbf{Development tools}: autotools, ant, Eclipse, gdb, valgrind, GNU coreutils.
+			\item \textbf{Системы контроля версий}: git, subversion
+			\item \textbf{Инструменты разработки}: autotools, ant, Eclipse, gdb, valgrind, GNU coreutils.
 		\end{items}
 	\end{multicols}
 
-	\section{Awards}
+	\section{Достижения}
 	\begin{items}
 		\begin{multicols}{2}
 			\raggedcolumns
-			\item \textbf{\Rmnum{3} degree diploma}\\ACM ICPC'2010 NEERC (Siberian group).
-			\item \textbf{\Rmnum{3} degree diploma}\\ACM ICPC'2009 NEERC (Siberian group).
+			\item \textbf{Диплом \Rmnum{3} степени}\\ACM ICPC'2010 NEERC (Сибирская группа).
+			\item \textbf{Диплом \Rmnum{3} степени}\\ACM ICPC'2009 NEERC (Сибирская группа).
 			\columnbreak
-			\item \textbf{\Rmnum{1} degree diploma}\\Game Development Contest,\\Far Eastern Federal University, 2006.
+			\item \textbf{Диплом \Rmnum{1} степени}\\<<Юный программист>>,\\Дальневосточный Государственный университет, 2006.
 		\end{multicols}
 	\end{items}
 
