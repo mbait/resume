@@ -1,5 +1,6 @@
 \documentclass[a4paper]{article}
 
+\usepackage{cmap}
 \usepackage[T1]{fontenc}
 %\usepackage{helvet}
 %\usepackage{tgadventor} % for the headings
@@ -30,9 +31,9 @@
 % Remove the 'osf' bit if you don't like the old style figures.
 %\usepackage[T1]{fontenc}
 %\usepackage[sc,osf]{mathpazo}
-
 % Set your name here
-\def\name{\fontfamily{phv}\selectfont{Александр Соловец}}
+%\def\name{\fontfamily{phv}\selectfont{Александр Соловец}}
+\def\name{Александр Соловец}
 \markright{\name}
 
 % The following metadata will show up in the PDF properties
@@ -54,7 +55,12 @@
 \begin{center}
 	{\Huge \bfseries \name}\\
 	\vskip 1ex
-	\fontfamily{qag}\selectfont{\href{tel:+7-950-289-99-08}{+7 (950) 289--99--08} {\small$\bullet$} Владивосток {\small$\bullet$} \href{mailto:asolovets@gmail.com}{asolovets@gmail.com}}
+  % \fontfamily{qag}\selectfont{\href{tel:+7-950-289-99-08}{+7 (950)
+  % 289--99--08} {\small$\bullet$} Владивосток {\small$\bullet$}
+  % \href{mailto:asolovets@gmail.com}{asolovets@gmail.com}}
+  \href{tel:+7-950-289-99-08}{+7 (950)
+  289--99--08} {\small$\bullet$} Владивосток {\small$\bullet$}
+  \href{mailto:asolovets@gmail.com}{asolovets@gmail.com}
 \end{center}
 
 \small
@@ -141,11 +147,15 @@
 	\begin{multicols}{2}
 		\raggedcolumns
 		\begin{items}
-			\item \textbf{Основы}: базовые знания алгоритмов и структур данных, понимание основ архитектуры x86, дискретная математика, ООП, функиональное и логическое программирование.
-			\item \textbf{Языки}: C, C\texttt{++}, Java, Perl, Python, JavaScript.
+      \item \textbf{Основы}: базовые знания алгоритмов и структур данных,
+        понимание основ архитектуры x86, дискретная математика, ООП,
+        функиональное и логическое программирование.
+
 			\columnbreak
-			\item \textbf{Системы контроля версий}: git, subversion
-			\item \textbf{Инструменты разработки}: autotools, ant, Eclipse, gdb, valgrind, GNU coreutils.
+
+			\item \textbf{Языки}: C, C\texttt{++}, Java, Perl, Python, R.
+      \item \textbf{Библиотеки}: Google Guava, Google Guice, Google Web
+        Toolkit, Spring, Spring Batch, NumPy.
 		\end{items}
 	\end{multicols}
 
