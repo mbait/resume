@@ -1,16 +1,17 @@
 \documentclass[a4paper]{article}
 
-\usepackage[T1]{fontenc}
-%\usepackage{helvet}
-%\usepackage{tgadventor} % for the headings
-\usepackage{lmodern} % for the text
+%% \usepackage[T1]{fontenc} % not required if OT1 is available
+%% \usepackage{helvet}      % not sure
+%% \usepackage{tgadventor}         % headings
+\usepackage{lmodern}            % main text
+%% \usepackage{inconsolata}        % monospace
 \usepackage{hyperref}
 \usepackage{geometry}
 \usepackage{sectsty}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
-%\usepackage{parcolumns}
+%% \usepackage{parcolumns}         % not sure
 \usepackage{multicol}
 \usepackage{tabularx}
 \usepackage{amssymb}
@@ -63,7 +64,28 @@
 \begin{multicols}{2}
   \raggedcolumns
 
-  \begin{project1}{Software Engineer}{FarPost LLC. Vladivostok, 2012 -- present}
+  \begin{project1}{Software Engineer}{Alpha Cephei Inc. Remote, 2013 -- present}
+    \begin{items}
+      \item Added support of acoustic model in Kaldi format into
+        Sphinx4 speech recognition library. Kaldi model supports
+        variable dimension gaussian mixture models which allowed to
+        keep word error rate at 2.5$\%$ for a particular model.
+      \item Refactred pocketsphinx build for Android and formed it
+        into standalone library that can be used in Android
+        applications for offline speech recognition.
+      \item Provided pocketsphinx bindings for Java and Python using
+        SWIG: designed interfaces and implemented routines for data
+        type converstion.
+      \item Designed and implemented simplified API for Sphinx4 core
+        which allowed to skip XML configuration step and setup speech
+        recognition with just a few method calls.
+      \item Made small enhancements in other CMU Sphinx components.
+    \end{items}
+  \end{project1}
+
+  \columnbreak
+
+  \begin{project1}{Software Engineer}{FarPost LLC. Vladivostok, 2012 -- 2012}
     \begin{items}
     \item Refactored tool for statistical analysis, and added calculation
       of a confidence interval.
@@ -74,8 +96,6 @@
       formats.
     \end{items}
   \end{project1}
-
-  \columnbreak
 
   \begin{project1}{Software Engineer Intern}{VladLink LLC. Vladivostok, 2009 -- 2010}
     \begin{items}
@@ -100,6 +120,8 @@
     \end{items}
   \end{project2}
 
+  \columnbreak
+
   \begin{project2}{Freedroid RPG}{\begin{tabular}{@{}l|l}Google Summer of Code, 2010 & C\\\end{tabular}}
     Open-source single person role-played game.
     \begin{items}
@@ -108,23 +130,6 @@
     \end{items}
   \end{project2}
 
-  \columnbreak
-
-  \begin{project2}{FriCAS}{\begin{tabular}{@{}l|l}Autumn Marathon Contest, 2010 & Axiom, Scheme\\\end{tabular}}
-    Open-source advanced computer algebra system.
-    \begin{items}
-    \item Reduced FriCAS feedback latency by 70$\%$ by getting rid of the glue program that converted FriCAS output in \TeX{} and adding support of TeXmacs data syntax into FriCAS.
-    \end{items}
-  \end{project2}
-
-  \begin{project2}{Compiler}{\begin{tabular}{@{}l|l}Course work, 2008 & C\texttt{++}\\\end{tabular}}
-    Pascal to assembly code translator.
-    \begin{items}
-    \item Implemented all basic statements, including procedures and functions.
-    \item Implemented arrays, structures and mixed declarations of arrays and structures.
-    \item Implemented function arguments passing by reference.
-    \end{items}
-  \end{project2}
 \end{multicols}
 
 \section{Education}
@@ -143,15 +148,16 @@
 \begin{multicols}{2}
   \raggedcolumns
   \begin{items}
-  \item \textbf{CS fundamentals}: general knowledge of algorithms and data
-    structures, understanding of x86 architecture basics, discrete math,
-    object-oriented programming, functional programming, statistics.
+  \item \textbf{CS fundamentals}: general knowledge of algorithms and
+    data structures, understanding of x86 architecture basics,
+    object-oriented programming, functional programming.
 
     \columnbreak
 
-  \item \textbf{Languages}: C, C\texttt{++}, Java, Perl, Python, R.
-  \item \textbf{Libraries and frameworks}: Google Guava, Google Guice,
-    Google Web Toolkit, Spring, Spring Batch, JUnit, TestNG, NumPy.
+  \item \textbf{Programming languages}: C, C\texttt{++}, Java, Perl,
+    Python, Erlang, R.
+  \item \textbf{Math}: digital signal processing, linear algebra,
+    discrete math, statistics.
   \end{items}
 \end{multicols}
 
