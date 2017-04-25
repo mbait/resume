@@ -2165,7 +2165,7 @@ endef
 # LaTeX invocations
 #
 # $(call latex,<tex file>,[<extra LaTeX args>])
-run-latex	= $(latex_build_program) -interaction=batchmode -file-line-error $(if $2,$2,) $1 > /dev/null
+run-latex	= $(latex_build_program) -interaction=batchmode -file-line-error -shell-escape $(if $2,$2,) $1 > /dev/null
 
 # $(call latex-color-log,<LaTeX stem>)
 latex-color-log	= $(color_tex) $1.log
