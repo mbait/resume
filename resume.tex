@@ -15,6 +15,7 @@
 \usepackage{multicol}
 \usepackage{tabularx}
 \usepackage{amssymb}
+\usepackage{tikz}
 
 \usepackage{style}
 
@@ -41,7 +42,7 @@
   colorlinks = true,
   urlcolor = dark-gray,
   pdfauthor = {\name},
-  pdfkeywords = {math, mathematic, CS, software},
+  pdfkeywords = {math, mathematic, CS, software engineer, speech recognition},
   pdftitle = {\name: Curriculum Vitae},
   pdfsubject = {Curriculum Vitae},
   pdfpagemode = UseNone
@@ -53,10 +54,16 @@
 \sf
 
 \begin{center}
-  {\Huge \bfseries \name}\\
-  \vskip 1ex
-  \fontfamily{qag}\selectfont{Software engineer in speech processing,
-  \href{mailto:asolovets+gpg@gmail.com}{asolovets+gpg@gmail.com}}
+  {\Huge \bfseries \name}\\\vskip 1ex
+  %%\begin{tikzpicture}[]
+  %%  \draw[] plot[domain=-1.5*pi:-pi/4,samples=1000,xscale=.5,smooth] function { sin(4*x) / x };
+  %%  \draw[] plot[domain=-1.5*pi:-pi/4,samples=1000,xscale=.5,smooth] function { sin(4*x) * cos(x) / x } node[right]
+  %%  plot[] function {x};
+  %%\end{tikzpicture}
+
+  \newcommand{\email}{asolovets+cv@gmail.com}
+  \fontfamily{qag}\selectfont{Software Engineer in Speech Processing,
+  \href{mailto:\email}{\email}}
 \end{center}
 
 \small
@@ -65,47 +72,45 @@
 \begin{multicols}{2}
   \raggedcolumns
 
-  \begin{project1}{Software Engineer}{Alpha Cephei Inc. Remote, 2013 -- present}
+  \begin{project1}{Facebook Inc.}{Menlo Park (CA), 2015 -- Present}
     \begin{items}
-      \item Implemented multipass speech aligner capable to align long audio
-        such as books and podcasts.
-      \item Added support of acoustic model in Kaldi format into
-        Sphinx4 speech recognition library. Kaldi model supports
-        variable dimension gaussian mixture models which allowed to
-        keep word error rate at 2.5$\%$ for a particular model.
-      \item Refactored pocketsphinx build for Android and formed it
-        into standalone library that can be used in Android
-        applications for offline speech recognition.
-      \item Provided pocketsphinx bindings for Java and Python using
-        SWIG: designed interfaces and implemented routines for data
-        type conversion.
-      \item Designed and implemented simplified API for Sphinx4 core
-        which allowed to skip XML configuration step and setup speech
-        recognition with just a few method calls.
-      %% \item Made small enhancements in other CMU Sphinx components.
+    \item Integrated confusion network generation into Facebook video
+      captioning service to provide world alternatives in the editor.
+    \item Added ARPA language model support into\\Facebook/Wit.ai speech
+      recognition service.
+    \item Implemented a thread-safe flyweight pattern in the acoustic model
+      code, so that one model could be shared among many decoders.
+    \item Created a grammar-based (thrax) solution for inverse text
+      normalization problem to provide speech-to-text output in human-readable
+      form.
+    \item Fixed bug in acoustic modelling code, reducing the WER by 0.1\%.
+    \item Developed and applied a set of automatic tools to migrate a large
+      20-year-old code base in C to C\texttt{++}11.
     \end{items}
   \end{project1}
 
   \columnbreak
 
-  \begin{project1}{Software Engineer}{FarPost LLC. Vladivostok, 2012 -- 2012}
+  \begin{project1}{Wit.ai Inc.}{Palo Alto (CA)/Remote, 2014 -- 2015}
     \begin{items}
-    \item Refactored tool for statistical analysis, and added calculation
-      of a confidence interval.
-    \item Created a map-reduce application for counting occurrences of
-      compound values in a large dataset that cannot be fit into memory.
-    \item Integrated Na\"{\i}ve Bayes classifier core into a web-service
-      that classifies good names and outputs the result in JSON and CSV.
+    \item Designed and partially-implemented an internal speech recognitoin
+      service as an on-site\\alternative to Google's API.
+    \item Trained an adapted GMM model for embedded speech recognition,
+      dropping WER by 5\%.
     \end{items}
   \end{project1}
 
-  \begin{project1}{Software Engineer Intern}{VladLink LLC. Vladivostok, 2009 -- 2010}
+  \begin{project1}{Alpha Cephei Inc.}{Remote, 2013 -- 2014}
     \begin{items}
-    \item Optimized an algorithm of tile map generation reducing the
-      working time from a week to half an hour.
-    \item Designed and implemented multiuser GIS web-application for
-      interactive visualization of the city wide area network, using Google Web
-      Toolkit, OpenLayers and Java Persistence API.
+      \item Implemented multipass speech aligner capable of aligning long
+        audios such as books and\\podcasts.
+      \item Added support of acoustic model in Kaldi\\format into Sphinx4
+        speech recognition library. Kaldi model supports variable
+        dimension\\gaussian mixture models which allows it to keep word error
+        rate at 2.5$\%$ for a particular model.
+      %\item Designed and implemented a simplified API for Sphinx4 core which
+      %  allowed to skip XML configuration step and setup speech recognition
+      %  with just a few method calls.
     \end{items}
   \end{project1}
 
@@ -114,49 +119,71 @@
 \section{Projects}
 \begin{multicols}{2}
   \raggedcolumns
-  \begin{project2}{Review Board}{\begin{tabular}{@{}l|l}Google Summer of Code, 2011 & Python\\\end{tabular}}
-    Command-line interface for the code review system.
+
+  \begin{project2}{CMU Sphinx}{\begin{tabular}{@{}l|l}Speech recognition library & C, Python\\\end{tabular}}
     \begin{items}
-    \item Designed and partially implemented a code generator for making remote API requests.
-    \item Covered new and legacy code with tests increasing coverage from 31$\%$ to 42$\%$.
+    \item Refactored pocketsphinx build for Android and developed it into
+      standalone library that can be used in Android applications for offline
+      speech recognition.
+    \item Provided pocketsphinx bindings for Java and Python using SWIG:
+      designed interfaces and\\implemented routines for data type conversion.
+    \end{items}
+  \end{project2}
+
+  \begin{project2}{Kaldi}{\begin{tabular}{@{}l|l}Speech recognition framework & C\texttt{++}, Bash\\\end{tabular}}
+    \begin{items}
+    \item Fixed minor issues in data preparation scripts.
+    \item Added safe-checks for model training scripts.
+    \item Improved user documentation.
     \end{items}
   \end{project2}
 
   \columnbreak
 
-  \begin{project2}{Freedroid RPG}{\begin{tabular}{@{}l|l}Google Summer of Code, 2010 & C\\\end{tabular}}
-    Open-source single person role-played game.
+  \begin{project2}{Review Board}{\begin{tabular}{@{}l|l}Google Summer of Code'11 & Python\\\end{tabular}}
+    Command-line interface for the code review system.
     \begin{items}
-    \item Implemented procedural generation of NetHack-styled dungeons.
-    \item Implemented an algorithm to generate naturally looking forest maps based on fractals and self-similarity.
+    \item Designed and partially implemented a code\\generator for making
+      remote API requests.
+    \item Covered new and legacy code with tests\\increasing coverage from
+      31$\%$ to 42$\%$.
+    \end{items}
+  \end{project2}
+
+  \begin{project2}{Freedroid RPG}{\begin{tabular}{@{}l|l}Google Summer of Code'10 & C\\\end{tabular}}
+    Single person role-played game.
+    \begin{items}
+    \item Implemented an algorithm to generate natural-looking forest maps
+      based on fractals and self-similarity.
     \end{items}
   \end{project2}
 
 \end{multicols}
 
-\section{Skills}
-\begin{multicols}{2}
-  \raggedcolumns
-  \begin{items}
-  \item \textbf{CS fundamentals}: general knowledge of algorithms and
-    data structures, understanding of x86 architecture basics,
-    object-oriented programming, functional programming.
-
-    \columnbreak
-
-  \item \textbf{Programming languages}: C, %% C\texttt{++},
-    Java, Python.
-  \item \textbf{Math}: automatic speech recognition, digital signal processing,
-    linear algebra, discrete math, statistics.
-  \end{items}
-\end{multicols}
+%%\section{Skills}
+%%\begin{multicols}{2}
+%%  \raggedcolumns
+%%  \begin{items}
+%%  \item \textbf{CS fundamentals}: general knowledge of algorithms and
+%%    data structures, understanding of x86 architecture basics,
+%%    object-oriented programming, functional programming.
+%%
+%%    \columnbreak
+%%
+%%  \item \textbf{Programming languages}: C, %% C\texttt{++},
+%%    Java, Python.
+%%  \item \textbf{Math}: automatic speech recognition, digital signal processing,
+%%    linear algebra, discrete math, statistics.
+%%  \end{items}
+%%\end{multicols}
 
 \section{Education}
 \begin{multicols}{2}
   \raggedcolumns
   \begin{items}
-  \item \textbf{MS, Computer Science and Applied Math}\\
-    Far Eastern Federal University, 2006 -- 2011.
+  \item \textbf{M.S. in Computer Science and Math}\\
+    Far Eastern Federal University of Russia\\
+    2006 -- 2011
   \end{items}
   \columnbreak
   % this hack prevents above block from breaking onto two columns
